@@ -1,0 +1,19 @@
+{
+  "name": "pi-audit-fix",
+  "version": "1.0.0",
+  "keywords": [
+    "pi-skill"
+  ],
+  "pi": {
+    "skills": [
+      "./skills"
+    ]
+  },
+  "devDependencies": {
+    "@mariozechner/pi-coding-agent": "latest"
+  },
+  "peerDependencies": {
+    "@mariozechner/pi-coding-agent": "*"
+  },
+  "scripts": {}
+}
