@@ -1,5 +1,5 @@
 {
-  "name": "pi-audit-fix",
+  "name": "pi-pnpm-audit-fix",
   "version": "1.0.0",
   "keywords": [
     "pi-skill"
@@ -8,12 +8,6 @@
     "skills": [
       "./skills"
     ]
-  },
-  "devDependencies": {
-    "@mariozechner/pi-coding-agent": "latest"
-  },
-  "peerDependencies": {
-    "@mariozechner/pi-coding-agent": "*"
   },
   "scripts": {}
 }
