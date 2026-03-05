@@ -13,9 +13,8 @@ This skill attempts to fix dependency vulnerabilities from `pnpm audit`.
 - run `pnpm audit` if required. if there are no vulnerabilities, stop here.
 - In `pnpm-workspace.yaml`, comment out `minimumReleaseAge` line (if present)
 - Identify vulnerable dependency with `pnpm why <dependency>`
-- Try `pnpm audit --fix` first (automatic resolution when available)
-- If not fixed, try updating parent dependency: `pnpm up <parent>@latest`
-- Verify with `pnpm audit`
+- For top parent dependency from `pnpm why`, run `pnpm up <parent>@latest` and verify with `pnpm audit`
+- If not fixed, try `pnpm audit --fix` first (automatic resolution when available) and verify with `pnpm audit`
 - If still vulnerable, add override to `package.json` under `pnpm.overrides`:
 
   ```json
@@ -26,8 +25,7 @@ This skill attempts to fix dependency vulnerabilities from `pnpm audit`.
   }
   ```
 
-- Run `pnpm install` to apply overrides
-- Verify with `pnpm audit`
+- Run `pnpm install` to apply overrides and verify with `pnpm audit`
 - Verify codebase with `pnpm lint`, `pnpm typecheck` (if present in `package.json`)
 - Uncomment `minimumReleaseAge` in `pnpm-workspace.yaml`
 - Make a commit
